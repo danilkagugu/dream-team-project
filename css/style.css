@@ -115,10 +115,81 @@ body {
   margin-bottom: 4px;
 }
 
-.modal-input-wrap {}
+.modal-input-wrap {
+  position: relative;
+}
 
-.modal-input {}
+.modal-input {
+  width: 360px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+  outline: transparent;
+  padding-left: 38px;
+}
 
-.modal-icon {}
+.modal-input:focus {
+  border: 1px solid var(--IRIS, #4D5AE5);
+}
 
-.modal-textarea {}
+.modal-input:focus + .modal-icon {
+  fill: #4D5AE5;
+}
+
+.modal-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-textarea {
+  width: 360px;
+  height: 120px;
+  resize: none;
+  border-radius: 4px;
+  border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+  background-color: transparent;
+  outline: transparent;
+  padding: 8px 16px;
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkfield {}
+
+.check-input:checked + .input-check-text > .check-empty {
+  background-color: greenyellow;
+  border: none;
+  fill: #fff;
+}
+
+.input-check-text {}
+
+.check-empty {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid red;
+  fill: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-icon {}
+
+.input-check-link {}
